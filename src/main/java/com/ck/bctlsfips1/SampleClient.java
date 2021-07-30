@@ -16,8 +16,7 @@ public class SampleClient {
 		this.restTemplate = restTemplate;
 	}
 
-	String getData() {
-//		return restTemplate.getForObject(endpoint, String.class);
-		return restTemplate.getForObject("https://csabakoncz.github.io/ftg-data/db/link/1XFXBTv0bm.yaml", String.class);
+	String getData(String url) {
+		return restTemplate.getForObject(url, String.class);
 	}
 }
